@@ -14,12 +14,6 @@ public class Usuario {
     @Column
     private String senha;
 
-    //construtor
-    public Usuario(String cpf, String senha) {
-        this.cpf = cpf;
-        this.senha = senha;
-    }
-
     //getters and setters
     public String getCpf() {
         return cpf;
