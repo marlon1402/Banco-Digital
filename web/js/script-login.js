@@ -25,7 +25,9 @@ function enviarDados() {
     .then(data => {
         console.log('Sucesso:', data);
         if (data.success) {
-            window.location.href = '/exemplo'; // Redireciona para outra página se o login for bem-sucedido
+            window.history.replaceState(null, null, window.location.href);
+
+            window.location.href = 'homePage.html'; // Redireciona para outra página se o login for bem-sucedido
         } else {
             alert('Login falhou. CPF ou senha incorretos.');
         }
