@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/style-cadastro.css">
+    <script src="/js/script-cadastro.js" defer></script>
+    <title>MS - Crie sua conta</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Crie sua conta</h1>
+        <form action="">
+            <label for="Nome">Nome:</label>
+            <input type="text" name="nome" id="nome" class="nome" placeholder="Nome Completo" minlength="3" maxlength="100" required>
+
+            <label for="Idade">Idade:</label>
+            <input type="number" name="idade" id="idade" class="idade" min="1" max="120" required>
+
+            <label for="Telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" class="tel" placeholder="(99) 99999-9999" minlength="11" maxlength="16" required>
+
+            <label for="Sexo">Sexo:</label>
+            <div class="input-radio">
+                <label class="custom-radio">
+                    <input type="radio" name="sexo" id="masc" class="sexo" value="M" required>
+                    Masculino
+                    <span class="radio-mark"></span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="sexo" id="fem" class="sexo" value="F" required>
+                    Feminino
+                    <span class="radio-mark"></span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="sexo" id="out" class="sexo" value="O" required>
+                    Outro(a)
+                    <span class="radio-mark"></span>
+                </label>
+            </div>
+
+            <label for="CPF">CPF:</label>
+            <input type="text" name="cpf" id="cpf" class="cpf" placeholder="___ . ___ . ___ - __" minlength="14" maxlength="14" required>
+
+            <label for="Senha">Senha:</label>
+            <input type="password" name="senha" id="senha" class="senha" placeholder="********" minlength="8" maxlength="30" required>
+
+            <div class="button-container">
+                <button>Criar</button>
+            </div>
+        </form>
+    </div>  <!-- Container -->
+</body>
+</html>

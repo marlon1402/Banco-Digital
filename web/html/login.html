@@ -13,10 +13,15 @@
         <h1>Acesse sua conta</h1>
         <form action="">
             <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" id="cpf" class="cpf" placeholder="___ . ___ . ___ - __" maxlength="14">
+            <input type="text" name="cpf" id="cpf" class="cpf" placeholder="___ . ___ . ___ - __" minlength="14" maxlength="14">
 
             <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha" class="senha" placeholder="********" minlength="8" maxlength="30">
+
+            <div class="link-texto">
+                <a href="#">Esqueceu a Senha?</a>
+                <a href="/html/cadastro.html">Crie uma conta</a>
+            </div>
 
             <div class="button-container">
                 <button>Acessar</button>

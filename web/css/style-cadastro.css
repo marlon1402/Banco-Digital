@@ -1,0 +1,111 @@
+/* VARIAVEL PARA COR PADRÃO */
+:root{
+    --cor-principal: #a6a6a6;
+}
+
+/* ESTILO GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: var(--cor-principal);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.623);
+    padding: 50px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    display: none;
+}   
+
+.custom-radio {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px; /* Espaço para o botão personalizado */
+    margin-right: 15px; /* Espaço entre os botões */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.radio-mark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #2f3235; /* Cor da borda do botão de rádio */
+    background-color: #fff; /* Cor de fundo quando não selecionado */
+}
+
+input[type="radio"]:checked + .radio-mark {
+    background-color: #2f3235; /* Cor de fundo quando selecionado */
+    border-color: #000000; /* Cor da borda quando selecionado */
+}
+
+/* Adiciona um efeito de transição suave */
+.radio-mark {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button{
+    margin-top: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3b3b3b;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40%;
+}
+
+button:hover {
+    background-color: #aaaaaa;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
