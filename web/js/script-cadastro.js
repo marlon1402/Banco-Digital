@@ -14,7 +14,7 @@ formulario.addEventListener('submit', function(event){
 
 function enviarDados(){
 
-    fetch("http://localhost:8080/cadastrar", {
+    fetch("http://localhost:8080/controller/cadastro", {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'

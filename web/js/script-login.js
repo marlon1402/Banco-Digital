@@ -9,7 +9,7 @@ formulario.addEventListener('submit', function (event) {
 });
 
 function enviarDados() {
-    fetch("http://localhost:8080/login/" + Icpf.value + "/" + Isenha.value, {
+    fetch("http://localhost:8080/controller/login/" + Icpf.value + "/" + Isenha.value, {
         method: "GET",
         headers: {
             'Accept': 'application/json',
