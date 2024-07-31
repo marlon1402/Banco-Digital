@@ -21,26 +21,29 @@ function enviarDados(){
         },
         method: "POST",
         body: JSON.stringify({
-            nome: Inome.value,
-            idade: Iidade.value,
-            telefone: Itelefone.value,
+            nome: Inome.value,          // Certifique-se de que Inome.value está correto
+            idade: Iidade.value,        // Certifique-se de que Iidade.value está correto
+            telefone: Itelefone.value,  // Certifique-se de que Itelefone.value está correto
             sexo: document.querySelector("input[name='sexo']:checked").value,
-            cpf: Icpf.value,
-            senha: Isenha.value,
+            cpf: Icpf.value,            // Certifique-se de que Icpf.value está correto
+            senha: Isenha.value         // Certifique-se de que Isenha.value está correto
         })
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Network response was not ok.');
+            return response.text().then(text => {
+                throw new Error('Network response was not ok. Status: ' + response.status + ', Message: ' + text);
+            });
         }
         return response.json(); // Assumindo que a resposta é JSON
     })
-    .then(function (data) {
-        window.location.href = 'homePage.html';
+    .then(data => {
+        window.location.href = 'homePage.html'; // Redireciona após sucesso
     })
-    .catch(function (error) {
+    .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
     });
+     
     
 }
 
