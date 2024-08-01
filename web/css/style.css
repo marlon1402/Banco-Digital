@@ -1,67 +1,82 @@
-/* VARIAVEL PARA COR PADRÃO */
-:root{
+/* definições de variaveis */
+
+:root {
     --cor-principal: #a6a6a6;
 }
 
-/* ESTILO GERAL */
+/* estilização geral */
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box ;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     background-color: var(--cor-principal);
-    height: 100vh;
+    padding-top: 70px; /* Espaçamento para o menu fixo no topo */
 }
 
-.interface{
-    max-width: 1280px;
-    margin: auto;
-}
+/* Menu fixo no topo da tela e horizontal */
 
-/* ESTILO DO CABEÇALHO */
-
-header{
-    padding: 10px 4%;
-}
-
-header > .interface{
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos */
 }
 
-.logo img{
+/* Estilização do logo */
+
+.logo img {
     width: 50px;
     border-radius: 10px;
 }
 
-header a{
+/* Estilização dos links do menu */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento entre os itens do menu */
+}
+
+nav a {
     color: black;
     text-decoration: none;
-    display: inline-block;
+    font-weight: 600;
     transition: .2s;
 }
 
-header a:hover{
+nav a:hover {
     color: gray;
     transform: scale(1.05);
 }
 
-header nav ul{
-    list-style-type: none;
+/* Estilização do botão de login */
+
+.btn-login {
+    display: flex;
+    align-items: center;
 }
 
-header nav ul li{
-    display: inline-block;
-    padding: 0 40px;
-    font-weight: 600;
+.btn-login a {
+    text-decoration: none;
 }
 
-header .btn-login button{
+.btn-login button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
@@ -69,39 +84,16 @@ header .btn-login button{
     border-radius: 10px;
     border: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-header .btn-login button img{
+.btn-login button img {
     width: 30px;
     margin-left: 10px;
     vertical-align: middle;
 }
 
-header .btn-login button:hover{
+.btn-login button:hover {
     box-shadow: 0px 0px 8px rgb(97, 97, 97);
 }
-
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--cor-principal);
-    padding: 10px;
-}
-
-.menu a{
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-family: sans-serif;
-    font-size: 17px;
-}
-
-.menu a:hover{
-    color: gray;
-}
-
-.menu .align-right {
-    margin-left: auto;
-}
-
