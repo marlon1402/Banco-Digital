@@ -22,7 +22,7 @@ public class Usuario {
     @Column
     private String senha;
     @Column
-    private String dinheiro;
+    private int dinheiro;
 
     //getters and setters
 
@@ -70,15 +70,19 @@ public class Usuario {
         return senha;
     }
 
+    public Usuario(){
+        this.dinheiro = 1000;
+    }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
 
-    public String getDinheiro() {
+    public int getDinheiro() {
         return dinheiro;
     }
 
-    public void setDinheiro(String dinheiro) {
+    public void setDinheiro(int dinheiro) {
         this.dinheiro = dinheiro;
     }
 }

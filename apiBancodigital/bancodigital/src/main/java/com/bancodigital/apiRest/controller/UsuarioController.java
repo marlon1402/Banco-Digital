@@ -11,13 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/controller")
-@CrossOrigin("*")
 public class UsuarioController {
 
     @Autowired
     UsuarioRepository userRepo;
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/cadastro")
     public ResponseEntity<Usuario> cadastrar(@RequestBody Usuario usuario){
         Usuario savedUser = (Usuario) userRepo.save(usuario);
         return new ResponseEntity<>(savedUser, HttpStatus.CREATED);

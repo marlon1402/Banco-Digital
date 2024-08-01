@@ -1,18 +1,20 @@
 const formulario = document.querySelector("form");
-const Inome = document.querySelector(".nome");
-const Iidade = document.querySelector(".idade");
-const Itelefone = document.querySelector(".tel");
-const Isexo = document.querySelector("input[name='sexo']:checked");
-const Icpf = document.querySelector(".cpf");
-const Isenha = document.querySelector(".senha");
 
-formulario.addEventListener('submit', function(event){
+// Adicione um listener para o evento de submissão do formulário
+formulario.addEventListener('submit', function(event) {
     event.preventDefault();
     enviarDados();
     limparCampos();
 });
 
-function enviarDados(){
+function enviarDados() {
+    // Capture os valores dos campos dentro da função para garantir que você esteja pegando os valores mais recentes
+    const Inome = document.querySelector(".nome").value;
+    const Iidade = document.querySelector(".idade").value;
+    const Itelefone = document.querySelector(".tel").value;
+    const Isexo = document.querySelector("input[name='sexo']:checked")?.value; // Adicione o operador de encadeamento opcional
+    const Icpf = document.querySelector(".cpf").value;
+    const Isenha = document.querySelector(".senha").value;
 
     fetch("http://localhost:8080/controller/cadastro", {
         headers: {
@@ -21,12 +23,12 @@ function enviarDados(){
         },
         method: "POST",
         body: JSON.stringify({
-            nome: Inome.value,          // Certifique-se de que Inome.value está correto
-            idade: Iidade.value,        // Certifique-se de que Iidade.value está correto
-            telefone: Itelefone.value,  // Certifique-se de que Itelefone.value está correto
-            sexo: document.querySelector("input[name='sexo']:checked").value,
-            cpf: Icpf.value,            // Certifique-se de que Icpf.value está correto
-            senha: Isenha.value         // Certifique-se de que Isenha.value está correto
+            nome: Inome,
+            idade: Iidade,
+            telefone: Itelefone,
+            sexo: Isexo,
+            cpf: Icpf,
+            senha: Isenha
         })
     })
     .then(response => {
@@ -38,20 +40,14 @@ function enviarDados(){
         return response.json(); // Assumindo que a resposta é JSON
     })
     .then(data => {
+        console.log('Success:', data);
         window.location.href = 'homePage.html'; // Redireciona após sucesso
     })
     .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
     });
-     
-    
 }
 
 function limparCampos() {
-    Inome = "";
-    Iidade ="";
-    Itelefone ="";
-    Isexo = "";
-    Icpf.value = "";
-    Isenha.value = "";
+    formulario.reset();  
 }

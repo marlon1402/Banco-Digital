@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
-
     @Query("select u from Usuario u where u.cpf = ?1 and u.senha = ?2")
     List<Usuario> findByCpfSenha(String cpf, String senha);
 }
