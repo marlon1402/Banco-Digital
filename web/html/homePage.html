@@ -4,16 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/style-home.css">
     <title>MS - O banco do seu futuro</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Conta</a></li>  
-            </ul>
-        </nav>
+        <div class="menu-desktop">
+            <div class="logo">
+                <a href="#">
+                    <img src="/img/favicon.png" alt="Logo do Banco MS">
+                </a>
+            </div> <!--logo-->
+    
+            <nav class="links-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Conta</a></li>  
+                </ul>
+            </nav> <!-- links-menu -->
+        </div> <!-- menu-desktop -->
     </header>
+
+    <section class="saldo-disponivel">
+        <label for="saldo">Saldo Disponivel</label>
+        <label for="valor">R$ 0000,00</label>
+        <hr>
+        <a href="#">Conferir Extrato</a>
+    </section> <!-- saldo-disponivel -->
+
+    <section class="historico-tranferencia">
+        <a href="#">
+            Confira o Histórico de Transferências
+            <img src="/img/icone_login.png" alt="Icone de Seta">
+        </a>
+    </section> <!-- historico-tranferencia -->
+
+    <section class="fazer-transferencia">
+        <label for="transferencia">Fazer uma Transferência</label>
+        <input type="text" name="text-cpf" id="text-cpf" placeholder="Digite o CPF de quem vai receber">
+        <input type="text" name="text-money" id="text-money" placeholder="Digite o valor da Transferência. Ex: R$100,00">
+    </section>
 </body>
 </html>
