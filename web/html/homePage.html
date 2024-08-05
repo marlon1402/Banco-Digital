@@ -25,30 +25,31 @@
         </div> <!-- menu-desktop -->
     </header>
 
-    <section>
+
+    <section class="saldo">
         <div class="saldo-disponivel">
-            <label for="saldo">Saldo Disponivel</label>
-            <label for="valor">R$ 0000,00</label>
+            <label for="saldo" class="labelsaldo">Saldo Disponível</label>
+            <label for="valor" class="labelvalor">R$ 0000,00</label>
             <hr>
             <a href="#">Conferir Extrato</a>
         </div> <!-- saldo-disponivel -->
     </section>
 
-    <section>
+    <section class="transferencia">
+        <div class="fazer-transferencia">
+            <label for="transferencia" class="labeltransferencia">Fazer uma Transferência:</label>
+            <input type="text" name="text-cpf" id="text-cpf" placeholder="Digite o CPF de quem vai receber">
+            <input type="text" name="text-balance" id="text-balance" placeholder="Digite o valor da Transferência. Ex: R$100,00">
+        </div> <!-- fazer-transferencia -->
+    </section>
+
+    <section class="historico">
         <div class="historico-transferencia">
             <a href="#">
                 Confira o Histórico de Transferências
                 <img src="/img/icone_login.png" alt="Icone de Seta">
             </a>
         </div> <!-- historico-transferencia -->
-    </section>
-
-    <section>
-        <div class="fazer-transferencia">
-            <label for="transferencia">Fazer uma Transferência</label>
-            <input type="text" name="text-cpf" id="text-cpf" placeholder="Digite o CPF de quem vai receber">
-            <input type="text" name="text-balance" id="text-balance" placeholder="Digite o valor da Transferência. Ex: R$100,00">
-        </div> <!-- fazer-transferencia -->
     </section>
 </body>
 </html>

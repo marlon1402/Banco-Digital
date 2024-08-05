@@ -1,5 +1,4 @@
 /* estilização geral */
-
 :root {
     --cor-principal: #a6a6a6;
 }
@@ -17,7 +16,6 @@ body {
 }
 
 /* estilização do menu */
-
 header {
     background-color: white;
     border-radius: 15px;
@@ -35,14 +33,12 @@ header {
 }
 
 /* estilização das imagens */
-
 .logo img {
     width: 50px;
     border-radius: 10px;
 }
 
 /* estilização dos links */
-
 nav ul {
     list-style: none;
     display: flex;
@@ -50,8 +46,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px; /* Espaçamento entre os itens do menu */
-    padding-left: 100px;
+    margin: 0 70px; /* Espaçamento entre os itens do menu */
 }
 
 nav a {
@@ -66,31 +61,119 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* estilização do conteúdo */
-
+/* ESTILIZAÇÃO DO CONTEÚDO */
 section {
     background-color: white;
     padding: 15px;
     border-radius: 15px;
 }
 
+/* estilização do saldo disponivel */
+.saldo {
+    width: 400px;
+}
+
 .saldo-disponivel {
     background-color: var(--cor-principal);
     border-radius: 15px;
     padding: 15px;
+    padding-bottom: 50px;
 }
 
+.labelsaldo, .labelvalor {
+    display: block;
+    margin-bottom: 20px;
+}
 
+.labelsaldo {
+    font-weight: 600;
+    font-size: 18px;
+}
 
+.labelvalor {
+    font-weight: 600;
+    font-size: 30px;
+}
 
+hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 20px 0;
+}
 
+.saldo-disponivel a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
 
+/* estilização do historico de transferencia */
+.historico {
+    max-width: 35%;
+    margin-top: 30px;
+}
 
-
-
+.historico-transferencia {
+    background-color: var(--cor-principal);
+    border-radius: 15px;
+    padding: 10px;
+    padding-bottom: 30%;
+}
 
 .historico-transferencia a img {
     width: 30px;
     margin-left: 10px;
     vertical-align: middle; 
+}
+
+.historico-transferencia a {
+    text-decoration: none; 
+    color: black;
+    font-weight: 600;
+    padding: 15px;
+}
+
+/* estilização do fazer a transferencia */
+
+.transferencia {
+    width: 58%;
+    position: absolute;
+    top: 22.6%;
+    left: 40%;
+    height: 72.5%;
+}
+
+.fazer-transferencia {
+    background-color: var(--cor-principal);
+    border-radius: 15px;
+    padding: 15px;
+    height: 100%;
+}
+
+.labeltransferencia {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    background-color: var(--cor-principal);
+    font-size: 14px;
+}
+
+input:focus {
+    background-color: #e0e0e0;
+    transition: background-color 0.5s;
+}
+
+input::placeholder {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
 }
