@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="menu-desktop">
+        <div class="menu">
             <div class="logo">
                 <a href="#">
                     <img src="/img/favicon.png" alt="Logo do Banco MS">
@@ -25,24 +25,30 @@
         </div> <!-- menu-desktop -->
     </header>
 
-    <section class="saldo-disponivel">
-        <label for="saldo">Saldo Disponivel</label>
-        <label for="valor">R$ 0000,00</label>
-        <hr>
-        <a href="#">Conferir Extrato</a>
-    </section> <!-- saldo-disponivel -->
+    <section>
+        <div class="saldo-disponivel">
+            <label for="saldo">Saldo Disponivel</label>
+            <label for="valor">R$ 0000,00</label>
+            <hr>
+            <a href="#">Conferir Extrato</a>
+        </div> <!-- saldo-disponivel -->
+    </section>
 
-    <section class="historico-tranferencia">
-        <a href="#">
-            Confira o Histórico de Transferências
-            <img src="/img/icone_login.png" alt="Icone de Seta">
-        </a>
-    </section> <!-- historico-tranferencia -->
+    <section>
+        <div class="historico-transferencia">
+            <a href="#">
+                Confira o Histórico de Transferências
+                <img src="/img/icone_login.png" alt="Icone de Seta">
+            </a>
+        </div> <!-- historico-transferencia -->
+    </section>
 
-    <section class="fazer-transferencia">
-        <label for="transferencia">Fazer uma Transferência</label>
-        <input type="text" name="text-cpf" id="text-cpf" placeholder="Digite o CPF de quem vai receber">
-        <input type="text" name="text-money" id="text-money" placeholder="Digite o valor da Transferência. Ex: R$100,00">
+    <section>
+        <div class="fazer-transferencia">
+            <label for="transferencia">Fazer uma Transferência</label>
+            <input type="text" name="text-cpf" id="text-cpf" placeholder="Digite o CPF de quem vai receber">
+            <input type="text" name="text-balance" id="text-balance" placeholder="Digite o valor da Transferência. Ex: R$100,00">
+        </div> <!-- fazer-transferencia -->
     </section>
 </body>
 </html>

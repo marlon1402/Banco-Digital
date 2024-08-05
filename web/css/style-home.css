@@ -1,0 +1,96 @@
+/* estilização geral */
+
+:root {
+    --cor-principal: #a6a6a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+    padding: 30px;
+}
+
+/* estilização do menu */
+
+header {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* estilização das imagens */
+
+.logo img {
+    width: 50px;
+    border-radius: 10px;
+}
+
+/* estilização dos links */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento entre os itens do menu */
+    padding-left: 100px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: gray;
+    transform: scale(1.05);
+}
+
+/* estilização do conteúdo */
+
+section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.saldo-disponivel {
+    background-color: var(--cor-principal);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+.historico-transferencia a img {
+    width: 30px;
+    margin-left: 10px;
+    vertical-align: middle; 
+}
