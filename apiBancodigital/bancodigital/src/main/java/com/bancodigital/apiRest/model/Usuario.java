@@ -1,9 +1,6 @@
 package com.bancodigital.apiRest.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table
@@ -17,12 +14,15 @@ public class Usuario {
     private String telefone;
     @Column
     private String sexo;
-    @Id
+    @Column(unique = true)
     private String cpf;
     @Column
     private String senha;
     @Column
     private int dinheiro;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idConta;
 
     //getters and setters
 
@@ -84,5 +84,13 @@ public class Usuario {
 
     public void setDinheiro(int dinheiro) {
         this.dinheiro = dinheiro;
+    }
+
+    public Long getIdConta() {
+        return idConta;
+    }
+
+    public void setIdConta(Long idConta) {
+        this.idConta = idConta;
     }
 }
