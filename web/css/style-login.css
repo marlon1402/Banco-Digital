@@ -1,18 +1,25 @@
 /* VARIAVEL PARA COR PADRÃO */
-:root{
+:root {
     --cor-principal: #a6a6a6;
+    --cor-modal-fundo: rgba(0, 0, 0, 0.7); /* Cor do fundo do modal */
+    --cor-modal-conteudo: #333; /* Cor de fundo do conteúdo do modal */
+    --cor-botao: #ffffff; /* Cor de fundo do botão */
+    --cor-botao-hover: #aaaaaa; /* Cor de fundo do botão ao passar o mouse */
+    --cor-texto-botao: black; /* Cor do texto do botão */
+    --cor-texto-modal: #333; /* Cor do texto no modal */
+    --cor-titulo-modal: #000; /* Cor do título do modal */
+    --cor-fechar-modal: #aaa; /* Cor do botão de fechar do modal */
 }
 
 /* ESTILO GERAL */
-
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box ;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     background-color: var(--cor-principal);
     height: 100vh;
     display: flex;
@@ -20,7 +27,7 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     background-color: rgba(0, 0, 0, 0.466);
     border-radius: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.623);
@@ -30,19 +37,19 @@ body{
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-bottom: 70px;
-    color: black;
+    color: var(--cor-titulo-modal);
 }
 
-label{
+label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input{
+input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -51,11 +58,33 @@ input{
     font-size: 16px;
 }
 
-.link-texto{
+.password-container {
+    position: relative;
+}
+
+input.senha {
+    padding-right: 40px; /* Espaço para o ícone */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 43%;
+    right: 10px; /* Ajuste conforme necessário */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px; /* Tamanho do ícone */
+    color: #555; /* Cor do ícone */
+}
+
+.toggle-password i {
+    transition: color 0.3s ease;
+}
+
+.link-texto {
     text-align: center;
 }
 
-.link-texto a{
+.link-texto a {
     color: black;
     text-decoration: none;
     font-size: 16px;
@@ -63,17 +92,17 @@ input{
     padding: 30px;
 }
 
-span{
+span {
     font-weight: 1000;
 }
 
-button{
+button {
     margin-top: 30px;
     padding: 10px;
     border: none;
     border-radius: 10px;
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -82,17 +111,16 @@ button{
 }
 
 button:hover {
-    background-color: #aaaaaa;
+    background-color: var(--cor-botao-hover);
 }
 
-.button-container{
+.button-container {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-
-/* styles.css */
+/* Toast */
 .toast {
     visibility: hidden; /* Oculta o toast por padrão */
     max-width: 300px;
@@ -116,23 +144,89 @@ button:hover {
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+/* Estilos do modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--cor-modal-fundo); /* Cor do fundo do modal */
+}
+
+.modal-content {
+    background-color: var(--cor-modal-conteudo); /* Cor do conteúdo do modal */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: var(--cor-fechar-modal); /* Cor do botão de fechar do modal */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-botao); /* Cor de fundo do botão */
+    color: var(--cor-texto-botao); /* Cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-botao-hover); /* Cor do botão ao passar o mouse */
+}
+
+h2 {
+    color: var(--cor-titulo-modal); /* Cor do título do modal */
+    padding-bottom: 3%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Animações do toast */
 @-webkit-keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @-webkit-keyframes fadeout {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 @keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeout {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
-
