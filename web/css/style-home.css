@@ -68,16 +68,23 @@ section {
     border-radius: 15px;
 }
 
-/* estilização do saldo disponivel */
-.saldo {
-    width: 400px;
+/* estilização do saldo e transferência */
+.saldo-transferencia {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.saldo, .transferencia {
+    width: 50%;
 }
 
 .saldo-disponivel {
     background-color: var(--cor-principal);
     border-radius: 15px;
     padding: 15px;
-    padding-bottom: 50px;
+    height: 100%;
 }
 
 .labelsaldo, .labelvalor {
@@ -108,42 +115,7 @@ hr {
     font-weight: 600;
 }
 
-/* estilização do historico de transferencia */
-.historico {
-    max-width: 35%;
-    margin-top: 30px;
-}
-
-.historico-transferencia {
-    background-color: var(--cor-principal);
-    border-radius: 15px;
-    padding: 10px;
-    padding-bottom: 30%;
-}
-
-.historico-transferencia a img {
-    width: 30px;
-    margin-left: 10px;
-    vertical-align: middle; 
-}
-
-.historico-transferencia a {
-    text-decoration: none; 
-    color: black;
-    font-weight: 600;
-    padding: 15px;
-}
-
-/* estilização do fazer a transferencia */
-
-.transferencia {
-    width: 58%;
-    position: absolute;
-    top: 22.6%;
-    left: 40%;
-    height: 72.5%;
-}
-
+/* estilização do fazer a transferência */
 .fazer-transferencia {
     background-color: var(--cor-principal);
     border-radius: 15px;
@@ -176,4 +148,32 @@ input:focus {
 input::placeholder {
     color: rgb(102, 102, 102);
     font-size: 14px;
+}
+
+/* estilização do histórico de transferências */
+.historico {
+    width: 100%;
+    max-width: 100%; /* Ajuste conforme necessário */
+    margin-top: 30px;
+}
+
+.historico-transferencia {
+    background-color: var(--cor-principal);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.historico-transferencia a img {
+    width: 30px;
+    margin-left: 10px;
+    vertical-align: middle; 
+}
+
+.historico-transferencia a {
+    text-decoration: none; 
+    color: black;
+    font-weight: 600;
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
 }
